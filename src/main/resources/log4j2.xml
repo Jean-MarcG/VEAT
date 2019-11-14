@@ -1,67 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="INFO">
-    <Appenders>
-            <!--  appender pour écrire dans la console -->
-        <Console name="myConsoleAppender" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
-        </Console>
-        
-        <!--  appender pour écrire dans un fichier avec une rotation mixte :
-        1 fichier par jour, on conserve les 10 derniers 
-        le fichier a une taille maximale de 100Mo -->
-        <RollingFile name="myRollingFileAppender" fileName="app.log"
-                    filePattern="app-%d{MM-dd-yyyy}-%i.log.gz">
-                        <PatternLayout>
-                                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
-                        </PatternLayout>
-                        <Policies>
-                                <TimeBasedTriggeringPolicy />
-                                <SizeBasedTriggeringPolicy size="100 MB" />
-                        </Policies>
-                        <DefaultRolloverStrategy max="10"/>
-                </RollingFile>
-                
-                <RollingFile name="myErrorFileAppender" fileName="error.log"
-                    filePattern="app-%d{MM-dd-yyyy}-%i.log.gz">
-                        <PatternLayout>
-                                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
-                        </PatternLayout>
-                        <Policies>
-                                <TimeBasedTriggeringPolicy />
-                                <SizeBasedTriggeringPolicy size="100 MB" />
-                        </Policies>
-                        <DefaultRolloverStrategy max="10"/>
-                </RollingFile>
-                
-    </Appenders>
-        
-    <Loggers>
-            <!-- logger principal qui écrira à la fois dans la console et dans le fichier app.log -->
-        <Root level="info">
-            <AppenderRef ref="myConsoleAppender"/>
-            <AppenderRef ref="myRollingFileAppender"/>
-        </Root>
-        
-        <!--  un autre logger qui concernera uniquement les errors -->
-        <Logger name="myErrorLogger" level="error" additivity="false">
-                <AppenderRef ref="myErrorFileAppender" />
-        </Logger>
-        
-        <!-- Log everything in hibernate -->
-    <Logger name="org.hibernate" level="info" additivity="false">
-      <AppenderRef ref="myConsoleAppender" />
-    </Logger>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration
+	xmlns:log4j="http://jakarta.apache.org/log4j/">
 
-    <!-- Log SQL statements -->
-    <Logger name="org.hibernate.SQL" level="info" additivity="false">
-      <AppenderRef ref="myConsoleAppender" />
-    </Logger>
+	<!-- Appenders -->
+	<appender name="console"
+		class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p: %c - %m%n" />
+		</layout>
+	</appender>
 
-    <!-- Log JDBC bind parameters -->
-    <Logger name="org.hibernate.type.descriptor.sql" level="trace" additivity="false">
-      <AppenderRef ref="myConsoleAppender" />
-    </Logger>
-        
-        
-    </Loggers>
-</Configuration>
+	<!-- Application Loggers -->
+	<logger name="fr.dawan.guanjia">
+		<level value="debug" />
+	</logger>
+
+
+	<!-- 3rdparty Loggers -->
+	<logger name="org.springframework.core">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.beans">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.context">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.web">
+		<level value="debug" />
+	</logger>
+
+	<logger name="org.hibernate">
+		<level value="info" />
+		<appender-ref ref="console" />
+	</logger>
+
+	<!-- Log SQL statements -->
+	<logger name="org.hibernate.SQL">
+		<level value="info" />
+		<appender-ref ref="console" />
+	</logger>
+
+	<!-- Log JDBC bind parameters -->
+	<logger name="org.hibernate.type.descriptor.sql">
+		<level value="info" />
+		<appender-ref ref="console" />
+	</logger>
+
+
+	<!-- Root Logger -->
+	<root>
+		<priority value="warn" />
+		<appender-ref ref="console" />
+	</root>
+
+</log4j:configuration>
