@@ -6,14 +6,7 @@
 	
 	<persistence-unit name="veat" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-		<class>fr.app.veat.entities.Carte</class>
-		<class>fr.app.veat.entities.Coordonnees</class>
-		<class>fr.app.veat.entities.Menu</class>
-		<class>fr.app.veat.entities.Produit</class>
-		<class>fr.app.veat.entities.Reservation</class>
-		<class>fr.app.veat.entities.Restaurant</class>
-		<class>fr.app.veat.entities.Utilisateur</class>
-		
+	
 		<!-- Proprietes JDBC -->
 		<properties>
 			<!-- URL De la BDD -->
