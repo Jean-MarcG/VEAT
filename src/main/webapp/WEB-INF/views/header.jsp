@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  <header class="masthead mb-auto">
+=======
+  <header class="masthead mb-auto">
+>>>>>>> branch 'master' of https://github.com/Jean-MarcG/veat.git
 	    <div class="inner">
 	      <h3 class="masthead-brand">VEAT</h3>
 	      <nav class="nav nav-masthead justify-content-center">
