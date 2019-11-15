@@ -22,41 +22,51 @@
   <body>
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 col-xl-9 mx-auto">
+      <div class=".col-6 .col-md-4 mx-auto" style="margin-top: 5%">
         <div class="card card-signin flex-row my-5">
           <div class="card-img-left d-none d-md-flex">
              <!-- Background image for card set in CSS! -->
           </div>
           <div class="card-body">
-            <h5 class="card-title text-center">Inscription</h5>
+            <h1 class="card-title text-center">Inscription</h1>
             <form class="form-signin">
               <div class="form-label-group">
-                <input type="text" id="inputUserame" class="form-control" placeholder="Username" required autofocus>
-                <label for="inputUserame">Username</label>
+                <input type="text" id="inputUserame" class="form-control" placeholder="Nom" required autofocus>
+                <label for="inputUserame"></label>
               </div>
-
+                <div class="form-label-group">
+                <input type="text" id="inputFirstname" class="form-control" placeholder="Prénom" required autofocus>
+                <label for="inputFirstname"></label>
+              </div>
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
-                <label for="inputEmail">Email address</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email" required>
+                <label for="inputEmail"></label>
               </div>
-              
+              <div class="form-label-group">
+                <input type="email" id="inputTel" class="form-control" placeholder="Téléphone" required>
+                <label for="inputTel"></label>
+              </div>
+                <div class="form-label-group">
+                <input type="email" id="inputAdress" class="form-control" placeholder="Adresse" required>
+                <label for="inputAdress"></label>
+              </div>
               <hr>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <label for="inputPassword">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+                <label for="inputPassword"></label>
               </div>
               
               <div class="form-label-group">
-                <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
-                <label for="inputConfirmPassword">Confirm password</label>
+                <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirmez le mot de passe" required>
+                <label for="inputConfirmPassword"></label>
               </div>
 
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
-              <a class="d-block text-center mt-2 small" href="#">Sign In</a>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Enregistrer</button>
+              <a class="d-block text-center mt-2 small" href="connection.jsp">Connexion</a>
               <hr class="my-4">
-              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign up with Google</button>
-              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign up with Facebook</button>
+              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> S'enregistrer avec Google</button>
+              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> S'enregistrer avec Facebook</button>
             </form>
           </div>
         </div>

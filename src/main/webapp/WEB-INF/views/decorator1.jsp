@@ -47,13 +47,13 @@
 	  <!--------------- navbar starts here --------------->
             <nav>
                   <span id="brand">
-                        <a href="index.html">VEAT</a>
+                        <a href="home">VEAT</a>
                   </span>
 
                   <ul id="menu">
                       
                         <li><a href="inscription">Inscription<span>.</span></a></li>
-                      
+                      	<li><a href="connexion">Connexion<span>.</span></a></li>
                   </ul>
 
                   <div id="toggle">
@@ -62,16 +62,7 @@
 
             </nav>
 
-            <div id="resize">
-                  <div class="close-btn">close</div>
-
-                 
-                  <ul id="menu">
-                       
-                        <li><a href="work.html">Se connecter<span>.</span></a></li>
-                       
-                  </ul>
-            </div>
+            
 
             <!--------------- navbar ends here --------------->
 	
@@ -98,8 +89,8 @@
                         <div class="info">
                               <div class="row">
                                     <div class="col-lg-4" id="personal">
-                                          <p class="wow fadeInUp">Contact</p>
-                                          <h4 class="wow fadeInUp" data-wow-delay="0.2s">ig @veat<h4>
+                                          <a  href="contact">Contact</a>
+                                          <h4 class="wow fadeInUp" data-wow-delay="0.2s">ig @veat</h4>
                                           <br><br>
                                     </div>
 
@@ -181,7 +172,7 @@
 
 	
 
-</div>
+
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

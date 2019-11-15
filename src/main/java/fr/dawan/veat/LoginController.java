@@ -12,4 +12,12 @@ public class LoginController {
 	public String showInscription() {
 		return "inscription";
 	}
+	@RequestMapping(value = "/home", method = RequestMethod.GET)
+	public String showHome() {
+		return "home";
+	}
+	@RequestMapping(value = "/contact", method = RequestMethod.GET)
+	public String showContact() {
+		return "contact";
+	}
 }
