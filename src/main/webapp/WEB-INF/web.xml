@@ -3,55 +3,44 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
-<<<<<<< HEAD
-	<!-- The definition of the Root Spring Container shared by all Servlets 
-		and Filters -->
-=======
->>>>>>> branch 'master' of https://github.com/Jean-MarcG/veat.git
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/spring/root-context.xml</param-value>
 	</context-param>
-<<<<<<< HEAD
 
-	<!-- Creates the Spring Container shared by all Servlets and Filters -->
-=======
->>>>>>> branch 'master' of https://github.com/Jean-MarcG/veat.git
 	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+		<listener-class>org.springframework.web.context.ContextLoaderListener
+		</listener-class>
 	</listener>
 	<servlet>
 		<servlet-name>appServlet</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml
+			</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/Jean-MarcG/veat.git
+
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	
-	
-	
+
 	<filter>
 		<filter-name>sitemesh</filter-name>
-		<filter-class>org.sitemesh.config.ConfigurableSiteMeshFilter</filter-class>
+		<filter-class>org.sitemesh.config.ConfigurableSiteMeshFilter
+		</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>sitemesh</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	
-	
-	
-	
+
 	<session-config>
 		<session-timeout>15</session-timeout>
 	</session-config>
