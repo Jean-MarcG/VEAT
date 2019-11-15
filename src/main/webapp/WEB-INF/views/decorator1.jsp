@@ -3,7 +3,6 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
 <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,7 +29,7 @@
 	      <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
 	    </div>
 	  </footer>
-=======
+
 	<head>
 	      <meta charset="UTF-8">
 	      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -206,9 +205,6 @@
 
       </script>
 
-
-	
->>>>>>> branch 'master' of https://github.com/Jean-MarcG/veat.git
 
 </div>
 

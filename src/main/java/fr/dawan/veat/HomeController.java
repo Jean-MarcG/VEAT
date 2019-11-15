@@ -34,15 +34,15 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-<<<<<<< HEAD
+
 
 		
 
 		return "home";
 
-=======
+
 		return "home";
->>>>>>> branch 'master' of https://github.com/Jean-MarcG/veat.git
+
 		
 		
 	}

@@ -1,10 +1,15 @@
-<<style>
-<!--
-.form-control-borderless {
+<style>
+	.form-control-borderless {
     border: none;
 }
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
 
-<<<<<<< HEAD
+</style>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -32,18 +37,6 @@
       </nav>
     </div>
   </header>
-=======
-.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
-    border: none;
-    outline: none;
-    box-shadow: none;
-}
--->
-</style>
-   
->>>>>>> branch 'master' of https://github.com/Jean-MarcG/veat.git
-
-<<<<<<< HEAD
 
   <main role="main" class="inner cover">
     <h1 class="cover-heading">Cover your page.</h1>
@@ -53,13 +46,8 @@
     </p>
   </main>
   
-=======
             <!--------------- projects section starts here --------------->
-   <div class="container" style="
-    margin-top: 18%;
-    margin-bottom: 10%;
-">
-    <br>
+   <div class="container" style="margin-top: 18%; margin-bottom: 10%;"><br>
 	<div class="row justify-content-center">
                         <div class="col-12 col-md-10 col-lg-8">
                             <form class="card card-sm">
@@ -83,4 +71,3 @@
                     </div>
 </div>
             <!--------------- projects section ends here --------------->
->>>>>>> branch 'master' of https://github.com/Jean-MarcG/veat.git
