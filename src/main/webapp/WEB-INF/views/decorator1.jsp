@@ -21,10 +21,10 @@
 	
     <sitemesh:write property='head' />
 </head>
-	        <title>Dawan <sitemesh:write property='title' /></title>
+	      <title>Dawan <sitemesh:write property='title' /></title>
 	        
-	        <!-- base sert à définir une référence qui préfixera l'ensemble des liens -->
-	        <base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/"%>" />
+	      <!-- base sert à définir une référence qui préfixera l'ensemble des liens -->
+	      <base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/"%>" />
 	    
 	       
 	      <!-- bootstrap cdns -->
@@ -47,7 +47,7 @@
 	      <script src="js/t.min.js"></script>
 	      
 	      
-	        <sitemesh:write property='head' />
+	      <sitemesh:write property='head' />
 	        	
 		
 	</head>
