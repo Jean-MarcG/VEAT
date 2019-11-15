@@ -16,8 +16,7 @@
             <!--------------- projects section starts here --------------->
    <div class="container" style="
     margin-top: 18%;
-    margin-bottom: 10%;
-">
+    margin-bottom: 10%;">
     <br>
 	<div class="row justify-content-center">
                         <div class="col-12 col-md-10 col-lg-8">

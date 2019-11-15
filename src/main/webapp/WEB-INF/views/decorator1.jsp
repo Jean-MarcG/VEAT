@@ -52,7 +52,7 @@
 
                   <ul id="menu">
                       
-                        <li><a href="work.html">Se connecter<span>.</span></a></li>
+                        <li><a href="inscription">Inscription<span>.</span></a></li>
                       
                   </ul>
 
