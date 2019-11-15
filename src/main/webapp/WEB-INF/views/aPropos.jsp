@@ -1,11 +1,4 @@
 
- 
-
-        
-    
-
-          
-
 
             <!--------------- hero image starts here --------------->
             <div class="container">
