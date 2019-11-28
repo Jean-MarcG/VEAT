@@ -39,7 +39,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "restoSelec";
+		return "home";
 		
 		
 	}

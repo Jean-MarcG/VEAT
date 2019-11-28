@@ -21,9 +21,11 @@ public class Restaurant extends DbObject implements Serializable {
 	@Enumerated(EnumType.STRING)
 	private TypeCuisine cuisine;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
 	private Utilisateur utilisateur;
 	
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Carte carte;
 
 	public String getNom() {
 		return nom;
@@ -66,7 +68,11 @@ public class Restaurant extends DbObject implements Serializable {
 		this.utilisateur = utilisateur;
 	}
 
-	
-	
-	
+	public Carte getCarte() {
+		return carte;
+	}
+
+	public void setCarte(Carte carte) {
+		this.carte = carte;
+	}
 }

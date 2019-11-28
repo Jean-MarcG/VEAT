@@ -1,6 +1,7 @@
 package fr.dawan.veat.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -15,15 +16,11 @@ public class Menu extends DbObject implements Serializable {
 	private double prixTTC;
 	
 	@OneToMany(mappedBy = "menu", cascade = CascadeType.ALL)
-	private List<Produit> produits;
+	private List<Produit> produits = new ArrayList<Produit>();
 	
 	@ManyToOne(cascade = CascadeType.ALL)
 	private Carte carte;
-	
-	
-	
-	
-	
+		
 	public Carte getCarte() {
 		return carte;
 	}
@@ -47,15 +44,17 @@ public class Menu extends DbObject implements Serializable {
 	public void setPrixTTC(double prixTTC) {
 		this.prixTTC = prixTTC;
 	}
-
+	
 	public List<Produit> getProduits() {
-		return produits;
+		return new ArrayList<Produit>(produits);
 	}
 
-	public void setProduits(List<Produit> produits) {
-		this.produits = produits;
+	public void addProduits(Produit p) {
+		produits.add(p);
 	}
-	
-	
+
+	public void removeProduits(Produit p) {
+		produits.remove(p);
+	}	
 
 }
