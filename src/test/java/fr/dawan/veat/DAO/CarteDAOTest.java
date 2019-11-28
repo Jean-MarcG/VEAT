@@ -59,7 +59,10 @@ public class CarteDAOTest {
 		Assert.assertNotEquals(0, produit.getId());
 	}
 	
-
+	public void deleteCarte() {
+		
+	}
+	
 	@Test
 	public void test() {
 	}
