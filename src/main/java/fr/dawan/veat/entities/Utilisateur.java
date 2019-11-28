@@ -10,6 +10,11 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Utilisateur extends DbObject implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private String prenom;
 	private String nom;
 	private String email;

@@ -26,6 +26,8 @@
 			
 		  <!-- stylesheet -->
 	      <link rel="stylesheet" href="resources/css/style.css">
+	      
+	      
 
 			
 	      <!-- for on scroll animations -->
@@ -128,7 +130,7 @@
             <!--------------- footer ends here --------------->
 
 
-</div>
+
 
 
 

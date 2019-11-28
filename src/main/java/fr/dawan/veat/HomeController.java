@@ -11,6 +11,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import fr.dawan.veat.dao.GenericDAO;
+import fr.dawan.veat.entities.Utilisateur;
+
 /**
  * Handles requests for the application home page.
  * @version 1.0
@@ -27,6 +30,9 @@ public class HomeController {
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
+		//Appeler au moins 1 fois pour créer le lien entre la BDD et le programme
+		//GenericDAO.findAll(Utilisateur.class);
+		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
@@ -34,7 +40,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "home";
+		return "restoSelec";
 		
 		
 	}

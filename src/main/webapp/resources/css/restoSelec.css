@@ -1,0 +1,18 @@
+
+
+
+
+@media(max-width: 768px) {
+      .project {
+            width: 90% !important;
+            margin: 14px auto;
+      }
+
+      .vertical {
+            display: none;
+      }
+
+      .project1::after, .project2::after, .project3::after, .project4::after {
+            display: none;
+      }
+}
