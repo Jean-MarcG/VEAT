@@ -15,20 +15,20 @@ import fr.dawan.veat.entities.Utilisateur;
 
 public class UtilisateurDAOTest {
 
-	Utilisateur utilisateur = new Utilisateur();
+	private Utilisateur utilisateur1 = new Utilisateur();
 	private static final String NOM_UTILISATEUR = "Dupont";
 	private static final String PRENOM_UTILISATEUR = "Mathieu";
 	private static final String EMAIL_UTILISATEUR = "dupontmathieu@gmail.com";
 	private static final String PWD_UTILISATEUR = "dawan";
 
-	Utilisateur utilisateur1 = new Utilisateur();
+	private Utilisateur utilisateur2 = new Utilisateur();
 	private static final String NOM_UTILISATEUR1 = "Dupont1";
 	private static final String PRENOM_UTILISATEUR1 ="Mathieu";
 	private static final String EMAIL_UTILISATEUR1 ="dupontmathieu@gmail.com";
 	private static final String PWD_UTILISATEUR1 ="dawan";
 	
 	
-	Utilisateur utilisateur2 = new Utilisateur();
+	private Utilisateur utilisateur3 = new Utilisateur();
 	private static final String NOM_UTILISATEUR2 = "Dupont2";
 	private static final String PRENOM_UTILISATEUR2 ="Mathieu";
 	private static final String EMAIL_UTILISATEUR2 ="dupontmathieu@gmail.com";
@@ -37,15 +37,15 @@ public class UtilisateurDAOTest {
 	@Before
 	public void createUtilisateurTest() {
 
-		utilisateur.setNom(NOM_UTILISATEUR);
-		utilisateur.setPrenom(PRENOM_UTILISATEUR);
-		utilisateur.setEmail(EMAIL_UTILISATEUR);
-		utilisateur.setPwd(PWD_UTILISATEUR);
-		utilisateur.setRole(TypeUtilisateur.CLIENT);
+		utilisateur1.setNom(NOM_UTILISATEUR);
+		utilisateur1.setPrenom(PRENOM_UTILISATEUR);
+		utilisateur1.setEmail(EMAIL_UTILISATEUR);
+		utilisateur1.setPwd(PWD_UTILISATEUR);
+		utilisateur1.setRole(TypeUtilisateur.CLIENT);
 
-		GenericDAO.create(utilisateur);
+		GenericDAO.create(utilisateur1);
 
-		Assert.assertNotEquals(0, utilisateur.getId());
+		Assert.assertNotEquals(0, utilisateur1.getId());
 
 	}
 
@@ -73,33 +73,33 @@ public class UtilisateurDAOTest {
 	@Test
 	public void findByIdUtilisateurTest() {
 
-		Utilisateur u = GenericDAO.findById(Utilisateur.class, utilisateur.getId());
+		Utilisateur u = GenericDAO.findById(Utilisateur.class, utilisateur1.getId());
 
 		Assert.assertNotNull(u);
-		Assert.assertEquals(NOM_UTILISATEUR, utilisateur.getNom());
-		Assert.assertEquals(PRENOM_UTILISATEUR, utilisateur.getPrenom());
-		Assert.assertEquals(EMAIL_UTILISATEUR, utilisateur.getEmail());
-		Assert.assertEquals(PWD_UTILISATEUR, utilisateur.getPwd());
+		Assert.assertEquals(NOM_UTILISATEUR, utilisateur1.getNom());
+		Assert.assertEquals(PRENOM_UTILISATEUR, utilisateur1.getPrenom());
+		Assert.assertEquals(EMAIL_UTILISATEUR, utilisateur1.getEmail());
+		Assert.assertEquals(PWD_UTILISATEUR, utilisateur1.getPwd());
 
 	}
 
 	@Test
 	public void updateUtilisateurTest() {
 
-		utilisateur.setNom("Bien");
-		utilisateur.setPrenom("JP");
-		utilisateur.setPwd("1234");
-		utilisateur.setEmail("xxx@ppp.com");
+		utilisateur1.setNom("Bien");
+		utilisateur1.setPrenom("JP");
+		utilisateur1.setPwd("1234");
+		utilisateur1.setEmail("xxx@ppp.com");
 		
 		
-		GenericDAO.update(utilisateur);
+		GenericDAO.update(utilisateur1);
 		
-		GenericDAO.findById(Utilisateur.class, utilisateur.getId());		
+		GenericDAO.findById(Utilisateur.class, utilisateur1.getId());		
 
-		Assert.assertEquals("Bien", utilisateur.getNom());
-		Assert.assertEquals("JP", utilisateur.getPrenom());
-		Assert.assertEquals("1234", utilisateur.getPwd());
-		Assert.assertEquals("xxx@ppp.com", utilisateur.getEmail());
+		Assert.assertEquals("Bien", utilisateur1.getNom());
+		Assert.assertEquals("JP", utilisateur1.getPrenom());
+		Assert.assertEquals("1234", utilisateur1.getPwd());
+		Assert.assertEquals("xxx@ppp.com", utilisateur1.getEmail());
 
 	}
 
@@ -108,8 +108,8 @@ public class UtilisateurDAOTest {
 		
 		GenericDAO.deleteAll(Utilisateur.class);
 		
-		GenericDAO.create(utilisateur1);
 		GenericDAO.create(utilisateur2);
+		GenericDAO.create(utilisateur3);
 		
 		List<Utilisateur> listUtilisateur = GenericDAO.findAll(Utilisateur.class);
 		
@@ -126,8 +126,8 @@ public class UtilisateurDAOTest {
 		
 		GenericDAO.deleteAll(Utilisateur.class);
 		
-		GenericDAO.create(utilisateur1);
 		GenericDAO.create(utilisateur2);
+		GenericDAO.create(utilisateur3);
 		
 		List<Utilisateur> listUtilisateur = GenericDAO.findAll(Utilisateur.class, 0, 2);
 		
@@ -143,9 +143,9 @@ public class UtilisateurDAOTest {
 	@After
 	public void removeUtilisateur() {
 
-		GenericDAO.remove(Utilisateur.class, utilisateur.getId());
+		GenericDAO.remove(Utilisateur.class, utilisateur1.getId());
 
-		Utilisateur u = GenericDAO.findById(Utilisateur.class, utilisateur.getId());
+		Utilisateur u = GenericDAO.findById(Utilisateur.class, utilisateur1.getId());
 
 		Assert.assertNull(u);
 

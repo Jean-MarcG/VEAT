@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -20,6 +21,9 @@ public class Carte extends DbObject implements Serializable {
 
 	@OneToMany(mappedBy = "carte", cascade = CascadeType.ALL)
 	private List<Menu> menus = new ArrayList<Menu>();
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Restaurant restaurant;
 
 	public String getNom() {
 		return nom;
@@ -64,4 +68,13 @@ public class Carte extends DbObject implements Serializable {
 	public void setMenus(List<Menu> menus) {
 		this.menus = menus;
 	}
+
+	public Restaurant getRestaurant() {
+		return restaurant;
+	}
+
+	public void setRestaurant(Restaurant restaurant) {
+		this.restaurant = restaurant;
+	}
+	
 }

@@ -13,14 +13,11 @@ public class Produit extends DbObject implements Serializable {
 	private String description;
 	private double prixTTC;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
 	private Carte carte;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
 	private Menu menu;
-
-	
-	
 	
 	public String getNom() {
 		return nom;

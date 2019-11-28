@@ -1,15 +1,13 @@
 package fr.dawan.veat.DAO;
 
-import static org.junit.Assert.fail;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
+import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import fr.dawan.veat.dao.GenericDAO;
@@ -20,37 +18,40 @@ import fr.dawan.veat.entities.Restaurant;
 
 public class CarteDAOTest {
 	
-	
-	Carte carte;
 //	List<Produit> produits = new ArrayList<Produit>();
 //	List<Menu> menus = new ArrayList<Menu>();
-	Restaurant restaurant;
 	
+	
+	
+	private  Restaurant restaurant = new Restaurant();
+	private  Carte carte = new Carte();
+	private  Produit produit = new Produit();
+	private  Menu menu = new Menu();
+
 	
 	@Before
 	public void createCarte() throws ParseException {
-		Restaurant restaurant = new Restaurant();
+		
 		restaurant.setNom("Chez Flo");
 		
-		Carte carte = new Carte();
 		carte.setDateMaj(new SimpleDateFormat("dd/MM/yyyy").parse("01/02/2007"));
 		carte.setNom("gastro");
 		
-		Produit produit = new Produit();
 		produit.setNom("NomProduit1");
 		produit.setDescription("salade");
 		produit.setPrixTTC(15.0);
 		produit.setCarte(carte);
 			
-		Menu menu = new Menu();
 		menu.setNom("midi");
+		menu.setCarte(carte);		
+		carte.addMenu(menu);
+		
+		restaurant.addCarte(carte);
+		carte.setRestaurant(restaurant);
 		
 		produit.setMenu(menu);
-		menu.setCarte(carte);		
-		
 		menu.addProduits(produit);
-		carte.addMenu(menu);
-		restaurant.setCarte(carte);
+		
 		GenericDAO.create(restaurant);
 		
 		Assert.assertNotEquals(0, restaurant.getId());
@@ -59,12 +60,35 @@ public class CarteDAOTest {
 		Assert.assertNotEquals(0, produit.getId());
 	}
 	
-	public void deleteCarte() {
-		
-	}
 	
-	@Test
-	public void test() {
+	@BeforeClass
+	public static void init() {
+		GenericDAO.deleteAll(Carte.class);
 	}
 
+	@AfterClass
+	public static void clean() {
+		GenericDAO.deleteAll(Carte.class);
+	}
+
+	@Test
+	public void createUtilisateurTestError() {
+		
+		Carte carte = null;
+
+		GenericDAO.create(carte);
+
+		Assert.assertNull(carte);
+
+	}
+	
+	@After
+	public void removeCarte() {
+		GenericDAO.remove(Carte.class, carte.getId());
+		System.out.println(carte.getId());
+
+		Carte u = GenericDAO.findById(Carte.class, carte.getId());
+
+		Assert.assertNull(u);
+	}
 }

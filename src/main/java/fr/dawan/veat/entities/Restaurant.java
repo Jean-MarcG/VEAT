@@ -1,12 +1,15 @@
 package fr.dawan.veat.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Restaurant extends DbObject implements Serializable {
@@ -24,8 +27,8 @@ public class Restaurant extends DbObject implements Serializable {
 	@ManyToOne
 	private Utilisateur utilisateur;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
-	private Carte carte;
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<Carte> cartes = new ArrayList<Carte>();
 
 	public String getNom() {
 		return nom;
@@ -68,11 +71,19 @@ public class Restaurant extends DbObject implements Serializable {
 		this.utilisateur = utilisateur;
 	}
 
-	public Carte getCarte() {
-		return carte;
+	public List<Carte> getCarte() {
+		return new ArrayList<Carte>(cartes);
 	}
 
-	public void setCarte(Carte carte) {
-		this.carte = carte;
+	public void addCarte(Carte carte) {
+		if (carte != null) {
+			this.cartes.add(carte);
+		}
+	}
+	
+	public void removeCarte(Carte carte) {
+		if (carte != null) {
+			this.cartes.remove(carte);
+		}
 	}
 }
