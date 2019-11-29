@@ -32,8 +32,6 @@ public class Reservation extends DbObject implements Serializable {
 	}
 
 	
-
-	
 	public short getNombreCouverts() {
 		return nombreCouverts;
 	}
@@ -57,7 +55,9 @@ public class Reservation extends DbObject implements Serializable {
 	public void setClient(Utilisateur client) {
 		this.client = client;
 	}
-	
-	
+
+	public void setDateTimeResa(TemporalType date) {
+	}
+
 
 }
