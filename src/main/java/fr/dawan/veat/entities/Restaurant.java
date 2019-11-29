@@ -27,7 +27,7 @@ public class Restaurant extends DbObject implements Serializable {
 	@ManyToOne
 	private Utilisateur utilisateur;
 	
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "restaurant")
 	private List<Carte> cartes = new ArrayList<Carte>();
 
 	public String getNom() {
