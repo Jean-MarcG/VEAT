@@ -2,7 +2,6 @@ package fr.dawan.veat.entities;
 
 import java.io.Serializable;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
@@ -58,7 +57,4 @@ public class Produit extends DbObject implements Serializable {
 	public void setMenu(Menu menu) {
 		this.menu = menu;
 	}
-	
-	
-
 }
