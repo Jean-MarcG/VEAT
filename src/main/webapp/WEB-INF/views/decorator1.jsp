@@ -45,16 +45,16 @@
 <body>
 
  
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <div class="wrapper">
 	  <!--------------- navbar starts here --------------->
             <nav>
                   <span id="brand">
-                        <a href="index.html">VEAT</a>
+                        <a href="home">VEAT</a>
                   </span>
 
                   <ul id="menu">
                       
-                        <li><a href="work.html">Se connecter<span>.</span></a></li>
+                        <li><a href="inscription">Inscription<span>.</span></a></li>
                       
                   </ul>
 

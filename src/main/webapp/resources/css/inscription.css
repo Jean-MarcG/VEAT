@@ -6,17 +6,22 @@
 body {
   background: #635b4b;
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  
 }
 
+.card{
+	margin-top: 20%;
+}
 .card-signin {
   border: 0;
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  
 }
 
 .card-signin .card-title {
-  margin-bottom: 2rem;
+  margin-bottom:2rem;
   font-weight: 300;
   font-size: 1.5rem;
 }
@@ -26,10 +31,12 @@ body {
   /* Link to your background image using in the property below! */
   background: scroll center url('https://images.unsplash.com/photo-1502301103665-0b95cc738daf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80');
   background-size: cover;
+  
 }
 
 .card-signin .card-body {
   padding: 2rem;
+   
 }
 
 .form-signin {
