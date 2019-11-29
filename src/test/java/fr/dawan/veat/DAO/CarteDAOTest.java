@@ -79,7 +79,6 @@ public class CarteDAOTest {
 		GenericDAO.create(carte);
 
 		Assert.assertNull(carte);
-
 	}
 	
 	@After
