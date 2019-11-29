@@ -1,3 +1,38 @@
+/*--------------- restoselec page --------------- */
+.restaurant a {
+	background-color: transparent;
+    color: #4e4e56;
+    text-decoration: none;
+}
+
+
+.restaurantCard-container {
+    display: table;
+}
+
+
+.restaurantTagContainer .restaurantTag {
+    margin: 0 6px 6px 0;
+}
+
+.restaurantTag {
+    display: inline-block;
+    padding: 0 5px;
+    text-transform: uppercase;
+    text-decoration: none!important;
+    font-family: Raleway;
+    font-weight: 400;
+    border-radius: 5px;
+    border: 1px solid #939396;
+    color: #939396;
+}
+
+
+    
+    .restaurantSummary .restaurantSummary-rateWrapper {
+    text-align: right;
+    cursor: pointer;
+
 
 
 

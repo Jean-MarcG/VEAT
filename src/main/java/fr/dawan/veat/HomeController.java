@@ -44,4 +44,9 @@ public class HomeController {
 		
 	}
 	
+//	@RequestMapping(value = "/inscription", method = RequestMethod.GET)
+//	public String showInscription() {
+//		return "inscription";
+//	}
+//	
 }
