@@ -8,6 +8,7 @@
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<class>fr.app.veat.entities.Carte</class>
 		<class>fr.app.veat.entities.Coordonnees</class>
+		<class>fr.app.veat.entities.DbObject</class>
 		<class>fr.app.veat.entities.Menu</class>
 		<class>fr.app.veat.entities.Produit</class>
 		<class>fr.app.veat.entities.Reservation</class>
