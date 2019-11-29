@@ -55,7 +55,7 @@
                   <ul id="menu">
                       
                         <li><a href="inscription">Inscription<span>.</span></a></li>
-                      
+                      <li><a href="connection">Se connecter<span>.</span></a></li>
                   </ul>
 
                   <div id="toggle">
@@ -64,16 +64,6 @@
 
             </nav>
 
-            <div id="resize">
-                  <div class="close-btn">close</div>
-
-                 
-                  <ul id="menu">
-                       
-                        <li><a href="work.html">Se connecter<span>.</span></a></li>
-                       
-                  </ul>
-            </div>
 
             <!--------------- navbar ends here --------------->
 	
@@ -100,7 +90,8 @@
                         <div class="info">
                               <div class="row">
                                     <div class="col-lg-4" id="personal">
-                                          <p class="wow fadeInUp">Contact</p>
+                                          <p class="wow fadeInUp">
+                                          <a href="contact">Contact</a></p>
                                           <h4 class="wow fadeInUp" data-wow-delay="0.2s">ig @veat<h4>
                                           <br><br>
                                     </div>

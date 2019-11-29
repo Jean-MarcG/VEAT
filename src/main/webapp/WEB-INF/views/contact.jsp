@@ -1,75 +1,46 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
-<html>
 <head>
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="generator" content="Jekyll v3.8.5">
+ <!-- stylesheet -->
+	      <link rel="stylesheet" href="resources/css/contact.css">
+			<link rel="stylesheet" href="resources/imgs/contact.css">
+</head>
+  
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto" style="margin-top: 5%">
+        <div class="card card-signin flex-row my-5">
+          <div class="card-img-left d-none d-md-flex">
+             <!-- Background image for card set in CSS! -->
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center">Contact</h5>
+            <h2 class="wow fadeInUp" data-wow-delay="1s">Bienvenue chez VEAT</h2><br>
+            <p class="wow fadeInUp" data-wow-delay="1.2s">Que pouvons nous faire pour vous ?</p> 
+            <form class="form-signin" name="contact-form" id="contact-form" method="post" action="">
+              <div class="form-label-group">
+                <input type="text"  id="inputUserame" class="form-control" placeholder="Nom"  required autofocus>
+                <label for="inputUserame"></label>
+              </div>
 
-	<title>Contact</title>
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="Adresse mail" required>
+                <label for="inputEmail"></label>
+              </div>
+              <hr>
+				<label for="contact-project"></label> 
+                      <div class="textarea"> 
+                      <textarea type="email" placeholder="Message" name="contact-project" id="contact-project" rows="6" value="" required>
+                       </textarea>
+                      </div> 
+              <button type="submit" name="contact-submit" id="contact-submit" class="send wow fadeInUp">Envoyer</button>
+          
+              <hr class="my-4">
+             
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
- <!-- Custom styles for this template -->
-    <link href="resources/css/inscription.css" rel="stylesheet">
-
-  <body>
-  	 <div class=".col-6 .col-md-4 mx-auto" style="margin-top: 5%" >
-
-
-            <!--------------- hero section starts here say hello 👋 --------------->
-            <div class="container">               
-                                    <h2 class="wow fadeInUp" data-wow-delay="1s">Bienvenue chez VEAT</h2><br>
-                                    <p class="wow fadeInUp" data-wow-delay="1.2s">Que pouvons nous faire pour vous ?</p>
-
-            </div>
-            <!--------------- hero section ends here --------------->
-
-            <!-- <div class="whitespace"></div> -->
-
-            <!--------------- form section starts here --------------->
-            <div class="container-fluid">
-                               
-                              <form name="contact-form" id="contact-form" method="post" action="">
-
-                              <ul>
-
-                              <li class="wow fadeInUp" data-wow-delay="1.4s">
-                                    <label for="contact-name"></label>
-                                    <div class="textarea">
-                                          <input type="text" placeholder="Nom" name="contact-name" id="contact-name" value="" required>
-                                    </div>
-                              </li>
-
-                              <li class="wow fadeInUp" data-wow-delay="1.6s">
-                                    <label for="contact-email"></label>
-                                    <div class="textarea">
-                                          <input type="email" placeholder="Email" name="contact-email" id="contact-email" value="" required>
-                                    </div>
-                              </li>
-
-                              <li class="wow fadeInUp" data-wow-delay="1.6s">
-                                    <label for="contact-project"></label>
-                                    <div class="textarea">
-                                          <textarea type="email" placeholder="Message" name="contact-project" id="contact-project" rows="6" value="" required>
-                                          </textarea>
-                                    </div>
-                              </li>
-
-                              </ul>
-
-                              <button type="submit" name="contact-submit" id="contact-submit" class="send wow fadeInUp">Envoyer</button>
-
-                              </form>
-                        </div>
-                  </div>
-            </div>
-  	 </div>
-</body>
-</html> 

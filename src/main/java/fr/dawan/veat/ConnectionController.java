@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/inscription")
-public class InscriptionController {
+@RequestMapping("/connection")
+public class ConnectionController {
 
-
+	
 	@GetMapping("")
-	public String showInscription() {
-		return "inscription";
+	public String showConnection() {
+		return "connection";
 	}
 }

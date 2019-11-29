@@ -28,9 +28,9 @@ body {
 }
 
 .card-signin .card-img-left {
-  width: 45%;
+  width: 30%;
   /* Link to your background image using in the property below! */
-  background: scroll center url("../img/pizza.jpg");
+  background: scroll center url(../img/soup-918422_640.jpg);
   background-size: cover;
   
 }
@@ -80,7 +80,7 @@ body {
   margin-bottom: 0;
   /* Override default `<label>` margin */
   line-height: 1.5;
-  color: #495057;
+  color: green;
   border: 1px solid transparent;
   border-radius: .25rem;
   transition: all .1s ease-in-out;
@@ -113,12 +113,8 @@ body {
   color: green;
 }
 
-.btn-google {
-  color: white;
-  background-color: #ea4335;
-}
-
-.btn-facebook {
-  color: white;
-  background-color: #3b5998;
+textarea {
+    overflow: auto;
+    resize: vertical;
+    width: 100%;
 }
