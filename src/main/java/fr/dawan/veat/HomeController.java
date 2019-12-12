@@ -10,9 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import fr.dawan.veat.dao.GenericDAO;
-import fr.dawan.veat.entities.Utilisateur;
-
 /**
  * Handles requests for the application home page.
  * @version 1.0
@@ -39,7 +36,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "inscription";
+		return "home";
 		
 		
 	}
