@@ -5,11 +5,9 @@
 
 <head>
 	<!-- stylesheet -->
-<<<<<<< HEAD
-	<link rel="stylesheet" href="../resources/css/connexion.css">
-=======
+
 	<link rel="stylesheet" href="resources/css/connexion.css">
->>>>>>> branch 'dev' of https://github.com/Jean-MarcG/veat.git
+
 	<base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/"%>"/>
 </head>
 
