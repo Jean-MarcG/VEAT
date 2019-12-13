@@ -7,19 +7,7 @@
 <body>
 <a name="home"></a>
 
-<!--   <div class="wrapper"> -->
-<!--
-            ------------- hero section starts here -------------
-            <div class="video-container">
-                  <video playsinline autoplay muted loop id="bgvid">
-                        <source src="resources/img/videobg.mp4" type="video/mp4">
-                  </video>
-            </div>
-            <div class="header">
-                  <h1>Vous accompagner pour trouver votre restaurant</h1>
-            </div>
-            ------------- hero section ends here -------------
-             -->
+
 <!-- HERO SECTION STARTS -->
 <div class="hero-section">
 	<div class="container-fluid">
@@ -32,7 +20,7 @@
 					</p>
 				</div>
 				<div class="search-container">
-					<input type="text" placeholder="Trouver une tableprès de vous...."
+					<input type="text" placeholder="une table près de vous...."
 						name=""> <i class="fas fa-search"></i>
 				</div>
 				<div class="shipping">

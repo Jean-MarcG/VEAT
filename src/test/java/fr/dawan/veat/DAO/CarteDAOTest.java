@@ -12,7 +12,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import fr.dawan.veat.dao.GenericDAO;
+import fr.dawan.veat.dao.GenericDao;
 import fr.dawan.veat.entities.Carte;
 import fr.dawan.veat.entities.Menu;
 import fr.dawan.veat.entities.Produit;
@@ -62,7 +62,7 @@ public class CarteDAOTest {
 		produit.setMenu(menu);
 		menu.addProduits(produit);
 
-		GenericDAO.create(restaurant);
+		GenericDao.create(restaurant);
 
 		Assert.assertNotEquals(0, restaurant.getId());
 		Assert.assertNotEquals(0, carte1.getId());
@@ -81,10 +81,10 @@ public class CarteDAOTest {
 	}
 
 	private static void cleanDB() {
-		GenericDAO.deleteAll(Restaurant.class);
-		GenericDAO.deleteAll(Produit.class);
-		GenericDAO.deleteAll(Menu.class);
-		GenericDAO.deleteAll(Carte.class);
+		GenericDao.deleteAll(Restaurant.class);
+		GenericDao.deleteAll(Produit.class);
+		GenericDao.deleteAll(Menu.class);
+		GenericDao.deleteAll(Carte.class);
 	}
 
 	@Test
@@ -92,7 +92,7 @@ public class CarteDAOTest {
 
 		Carte carte = null;
 
-		GenericDAO.create(carte);
+		GenericDao.create(carte);
 
 		Assert.assertNull(carte);
 	}
@@ -100,7 +100,7 @@ public class CarteDAOTest {
 	@Test
 	public void findByIdCarteTest() {
 
-		Carte u = GenericDAO.findById(Carte.class, carte1.getId());
+		Carte u = GenericDao.findById(Carte.class, carte1.getId());
 
 		Assert.assertNotNull(u);
 	}
@@ -109,14 +109,14 @@ public class CarteDAOTest {
 	public void updateUtilisateurTest() throws ParseException {
 		
 		
-		carte1.setNom("diarrhée");
+		carte1.setNom("diarrhï¿½e");
 		carte1.setDateMaj(dateTime);
 
-		GenericDAO.update(carte1);
+		GenericDao.update(carte1);
 
-		GenericDAO.findById(Carte.class, carte1.getId());
+		GenericDao.findById(Carte.class, carte1.getId());
 
-		Assert.assertEquals("diarrhée", carte1.getNom());
+		Assert.assertEquals("diarrhï¿½e", carte1.getNom());
 		Assert.assertEquals(dateTime, carte1.getDateMaj());
 	}
 	
@@ -125,7 +125,7 @@ public class CarteDAOTest {
 		
 		
 
-		List<Carte> listCarte = GenericDAO.findAll(Carte.class);
+		List<Carte> listCarte = GenericDao.findAll(Carte.class);
 		
 		Assert.assertNotNull(listCarte);
 		Assert.assertEquals(3, listCarte.size());	
@@ -135,10 +135,10 @@ public class CarteDAOTest {
 	@Test
 	public void findAllCarteTest2() {
 				
-		GenericDAO.create(carte2);
-		GenericDAO.create(carte3);
+		GenericDao.create(carte2);
+		GenericDao.create(carte3);
 		
-		List<Carte> listCarte = GenericDAO.findAll(Carte.class, 0, 2);
+		List<Carte> listCarte = GenericDao.findAll(Carte.class, 0, 2);
 		
 		Assert.assertNotNull(listCarte);
 		Assert.assertEquals(2, listCarte.size());	
@@ -147,10 +147,10 @@ public class CarteDAOTest {
 
 	@After
 	public void removeCarte() {
-		GenericDAO.remove(Restaurant.class, restaurant.getId());
+		GenericDao.remove(Restaurant.class, restaurant.getId());
 		System.out.println(carte1.getId());
 
-		Carte u = GenericDAO.findById(Carte.class, carte1.getId());
+		Carte u = GenericDao.findById(Carte.class, carte1.getId());
 
 		Assert.assertNull(u);
 	}

@@ -1,10 +1,11 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 
 <head>
 	<!-- stylesheet -->
-	<link rel="stylesheet" href="/resources/css/connexion.css">
+	<link rel="stylesheet" href="resources/css/connexion.css">
 	<base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/"%>"/>
 </head>
 
@@ -16,7 +17,7 @@
 					<!-- Background image for card set in CSS! -->
 				</div>
 				<div class="card-body">
-					<h5 class="card-title text-center">Connection</h5>
+					<h5 class="card-title text-center">Connexion</h5>
 					
 					<form:form class="form-signin" method="post" action="check-login" modelAttribute="login-form">
 					

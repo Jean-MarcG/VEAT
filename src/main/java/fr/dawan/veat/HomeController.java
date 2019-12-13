@@ -1,6 +1,4 @@
 package fr.dawan.veat;
-import java.text.DateFormat;
-import java.util.Date;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -28,13 +26,6 @@ public class HomeController {
 		
 		//Appeler au moins 1 fois pour créer le lien entre la BDD et le programme
 		//GenericDAO.findAll(Utilisateur.class);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
 		
 		return "home";
 		

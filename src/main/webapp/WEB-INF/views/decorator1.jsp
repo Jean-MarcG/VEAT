@@ -40,10 +40,10 @@
 	<div class="wrapper">
 		<!--------------- navbar starts here --------------->
 		<nav>
-			<span id="brand"> <a href="index.html">VEAT</a>
+			<span id="brand"> <a href="#">VEAT</a>
 			</span>
 			<ul id="menu">
-				<li><a href="">Inscription<span>.</span></a></li>
+				<li><a href="inscription">Inscription<span>.</span></a></li>
 				<li><a href="connexion">Se connecter<span>.</span></a></li>
 			</ul>
 			<div id="toggle">

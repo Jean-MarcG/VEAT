@@ -13,7 +13,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.transaction.annotation.Transactional;
 
-import fr.dawan.veat.dao.GenericDAO;
+import fr.dawan.veat.dao.GenericDao;
 import fr.dawan.veat.entities.TypeUtilisateur;
 import fr.dawan.veat.entities.Utilisateur;
 
@@ -50,7 +50,7 @@ public class UtilisateurDAOTest {
 		utilisateur1.setPwd(PWD_UTILISATEUR1);
 		utilisateur1.setRole(TypeUtilisateur.CLIENT);
 
-		GenericDAO.create(utilisateur1);
+		GenericDao.create(utilisateur1);
 
 		Assert.assertNotEquals(0, utilisateur1.getId());
 
@@ -58,12 +58,12 @@ public class UtilisateurDAOTest {
 
 	@BeforeClass
 	public static void init() {
-		GenericDAO.deleteAll(Utilisateur.class);
+		GenericDao.deleteAll(Utilisateur.class);
 	}
 
 	@AfterClass
 	public static void clean() {
-		GenericDAO.deleteAll(Utilisateur.class);
+		GenericDao.deleteAll(Utilisateur.class);
 	}
 
 	@Test
@@ -71,7 +71,7 @@ public class UtilisateurDAOTest {
 
 		Utilisateur utilisateur = null;
 
-		GenericDAO.create(utilisateur);
+		GenericDao.create(utilisateur);
 
 		Assert.assertNull(utilisateur);
 
@@ -80,7 +80,7 @@ public class UtilisateurDAOTest {
 	@Test
 	public Utilisateur findByIdUtilisateurTest() {
 
-		Utilisateur u = GenericDAO.findById(Utilisateur.class, utilisateur1.getId());
+		Utilisateur u = GenericDao.findById(Utilisateur.class, utilisateur1.getId());
 
 		Assert.assertNotNull(u);
 		Assert.assertEquals(NOM_UTILISATEUR, utilisateur1.getNom());
@@ -100,9 +100,9 @@ public class UtilisateurDAOTest {
 		utilisateur1.setEmail("xxx@ppp.com");
 		
 		
-		GenericDAO.update(utilisateur1);
+		GenericDao.update(utilisateur1);
 		
-		GenericDAO.findById(Utilisateur.class, utilisateur1.getId());		
+		GenericDao.findById(Utilisateur.class, utilisateur1.getId());		
 
 		Assert.assertEquals("Bien", utilisateur1.getNom());
 		Assert.assertEquals("JP", utilisateur1.getPrenom());
@@ -114,10 +114,10 @@ public class UtilisateurDAOTest {
 	@Test
 	public List<Utilisateur> findAllUtilisateurTest() {
 				
-		GenericDAO.create(utilisateur2);
-		GenericDAO.create(utilisateur3);
+		GenericDao.create(utilisateur2);
+		GenericDao.create(utilisateur3);
 		
-		List<Utilisateur> listUtilisateur = GenericDAO.findAll(Utilisateur.class);
+		List<Utilisateur> listUtilisateur = GenericDao.findAll(Utilisateur.class);
 		
 		Assert.assertNotNull(listUtilisateur);
 		Assert.assertEquals(3, listUtilisateur.size());	
@@ -129,10 +129,10 @@ public class UtilisateurDAOTest {
 	@Test
 	public List<Utilisateur> findAllUtilisateurTest2() {
 				
-		GenericDAO.create(utilisateur2);
-		GenericDAO.create(utilisateur3);
+		GenericDao.create(utilisateur2);
+		GenericDao.create(utilisateur3);
 		
-		List<Utilisateur> listUtilisateur = GenericDAO.findAll(Utilisateur.class, 0, 2);
+		List<Utilisateur> listUtilisateur = GenericDao.findAll(Utilisateur.class, 0, 2);
 		
 		Assert.assertNotNull(listUtilisateur);
 		Assert.assertEquals(2, listUtilisateur.size());	
@@ -158,9 +158,9 @@ public class UtilisateurDAOTest {
 	@After
 	public void removeUtilisateur() {
 
-		GenericDAO.remove(Utilisateur.class, utilisateur1.getId());
+		GenericDao.remove(Utilisateur.class, utilisateur1.getId());
 
-		Utilisateur u = GenericDAO.findById(Utilisateur.class, utilisateur1.getId());
+		Utilisateur u = GenericDao.findById(Utilisateur.class, utilisateur1.getId());
 
 		Assert.assertNull(u);
 

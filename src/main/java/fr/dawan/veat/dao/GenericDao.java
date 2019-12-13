@@ -11,7 +11,7 @@ import javax.persistence.TypedQuery;
 
 import fr.dawan.veat.entities.DbObject;
 
-public class GenericDAO {
+public class GenericDao {
 
 	public static <T extends DbObject> void create(T entity) {
 		if (entity != null && entity.getId() == 0) {
