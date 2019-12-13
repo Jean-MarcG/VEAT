@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import fr.dawan.veat.entities.Utilisateur;
 
-public class UtilisateurDAO {
+public class UtilisateurDao {
 
 	@PersistenceContext
 	protected EntityManager em;

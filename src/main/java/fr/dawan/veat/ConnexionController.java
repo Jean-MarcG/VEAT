@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import fr.dawan.veat.dao.UtilisateurDAO;
+import fr.dawan.veat.dao.UtilisateurDao;
 import fr.dawan.veat.entities.Utilisateur;
 
 @Controller
 public class ConnexionController {
 
 	@Autowired
-	private UtilisateurDAO utilisateurDao;
+	private UtilisateurDao utilisateurDao;
 
 	@GetMapping(value = "/connexion")
 	public String showLogin(Model model) {
