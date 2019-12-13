@@ -10,35 +10,14 @@ html, body {
 	box-sizing: border-box;
 	margin: 0%;
 	padding: 0%;
-	font-family: "Darker Grotesque" !important;
+
+}
+
+nav #brand a {
+    color: #008040 !imporrtant;
+    transition: all 0.3s ease-out;
 }
 /*--------------- hero section --------------- */
-.video-container {
-	position: absolute;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
-}
-
-video {
-	object-fit: cover;
-	width: 100vw;
-	height: 100vh;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-.video-container::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	background: #FFFFFF;
-	opacity: 0.8;
-}
 
 .header {
 	position: absolute;
@@ -138,6 +117,7 @@ div.search-container i:hover {
 	font-weight: 300;
 }
 
+
 a {
 	/*color: grey !important;*/
 	font-family: "Larsseit";
@@ -145,6 +125,8 @@ a {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
+
+
 
 .shipping {
 	position: absolute;
@@ -194,6 +176,9 @@ img {
 		margin-right: 0;
 	}
 }
+
+
+/*--------------- about section starts  --------------- */
 
 .content {
 	position: absolute;

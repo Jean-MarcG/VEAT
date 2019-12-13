@@ -109,14 +109,14 @@ public class CarteDAOTest {
 	public void updateUtilisateurTest() throws ParseException {
 		
 		
-		carte1.setNom("diarrhée");
+		carte1.setNom("diarrhï¿½e");
 		carte1.setDateMaj(dateTime);
 
 		GenericDao.update(carte1);
 
 		GenericDao.findById(Carte.class, carte1.getId());
 
-		Assert.assertEquals("diarrhée", carte1.getNom());
+		Assert.assertEquals("diarrhï¿½e", carte1.getNom());
 		Assert.assertEquals(dateTime, carte1.getDateMaj());
 	}
 	

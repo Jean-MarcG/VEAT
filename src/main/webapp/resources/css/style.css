@@ -39,7 +39,7 @@ nav #brand {
 }
 
 nav #brand a {
-	color: #008040;
+	color: #008040!important;
 	transition: all 0.3s ease-out;
 }
 

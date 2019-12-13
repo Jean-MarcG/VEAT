@@ -1,10 +1,15 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 
 <head>
 	<!-- stylesheet -->
+<<<<<<< HEAD
 	<link rel="stylesheet" href="../resources/css/connexion.css">
+=======
+	<link rel="stylesheet" href="resources/css/connexion.css">
+>>>>>>> branch 'dev' of https://github.com/Jean-MarcG/veat.git
 	<base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/"%>"/>
 </head>
 

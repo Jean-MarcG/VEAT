@@ -44,4 +44,7 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean id="utilisateurDao" class="fr.dawan.veat.dao.UtilisateurDao" />
+
+	<bean id="restaurantDao" class="fr.dawan.veat.dao.RestaurantDao"></bean>
+
 </beans>

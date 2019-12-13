@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import fr.dawan.veat.dao.UtilisateurDao;
+
 import fr.dawan.veat.entities.TypeUtilisateur;
 import fr.dawan.veat.entities.Utilisateur;
 
@@ -13,12 +14,10 @@ public class TestDataController {
 
 	@Autowired
 	private UtilisateurDao utilisateurDao;
-	
-	
+
 	public void setUtilisateurDao(UtilisateurDao utilisateurDao) {
 		this.utilisateurDao = utilisateurDao;
 	}
-
 
 	@GetMapping(value = "/insert-data")
 	public String insertData() {
@@ -32,4 +31,5 @@ public class TestDataController {
 		return "home";
 	}
 	
+
 }
