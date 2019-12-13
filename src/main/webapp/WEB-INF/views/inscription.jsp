@@ -1,7 +1,7 @@
 <head>
 
  <!-- stylesheet -->
-	      <link rel="stylesheet" href="resources/css/inscription.css">
+	      <link rel="stylesheet" href="../resources/css/inscription.css">
 
 </head>
   

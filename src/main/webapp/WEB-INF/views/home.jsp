@@ -167,7 +167,7 @@
 						<div class="team-img team-one"></div>
 					</div>
 					<div class="team-title">
-						<h5>Wilfried NIEDERHOFFER</h5>
+						<h5>Batman</h5>
 						<span>Founder & CEO</span>
 					</div>
 				</div>

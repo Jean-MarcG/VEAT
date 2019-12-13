@@ -6,6 +6,10 @@ body {
   background: #635B4B;
   background-image: linear-gradient(to top, #E6E9F0 0%, #EEF1F5 100%);
 }
+
+	
+	
+
 .card{
 	margin-top: 20%;
 }
@@ -20,10 +24,10 @@ body {
   font-weight: 300;
   font-size: 1.5rem;
 }
-.card-signin .card-img-left {
-  width: 45%;
+ .card-img-left {
+  width: 35%;
   /* Link to your background image using in the property below! */
-  background: scroll center url("../img/Tiramisu.jpg");
+   background: scroll center url("img/Tiramisu.jpg");
   background-size: cover;
 }
 .card-signin .card-body {

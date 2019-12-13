@@ -4,19 +4,20 @@
 
 <head>
 	<!-- stylesheet -->
-	<link rel="stylesheet" href="/resources/css/connexion.css">
+	<link rel="stylesheet" href="../resources/css/connexion.css">
 	<base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/"%>"/>
 </head>
 
  <div class="container">
-	<div class="row">
-		<div class="col-lg-10 col-xl-9 mx-auto" style="margin-top: 5%;">
+	<div class="row" style="margin-top: 5em">
+		<div class="col-lg-10 col-xl-9 mx-auto" >
 			<div class="card card-signin flex-row my-5">
 				<div class="card-img-left d-none d-md-flex">
 					<!-- Background image for card set in CSS! -->
+					<img class="card-img-left d-none d-md-flex" src="resources/img/Tiramisu.jpg" alt="responsive image"/>
 				</div>
 				<div class="card-body">
-					<h5 class="card-title text-center">Connection</h5>
+					<h5 class="card-title text-center">Connexion</h5>
 					
 					<form:form class="form-signin" method="post" action="check-login" modelAttribute="login-form">
 					

@@ -40,7 +40,7 @@
 	<div class="wrapper">
 		<!--------------- navbar starts here --------------->
 		<nav>
-			<span id="brand"> <a href="index.html">VEAT</a>
+			<span id="brand"> <a href="home">VEAT</a>
 			</span>
 			<ul id="menu">
 				<li><a href="">Inscription<span>.</span></a></li>
@@ -83,7 +83,7 @@
 				<div class="info">
 					<div class="row">
 						<div class="col-lg-4" id="personal">
-							<p class="wow fadeInUp">Contact</p>
+							<a class="wow fadeInUp" href="contact" >Contact</a>
 							<h4 class="wow fadeInUp" data-wow-delay="0.2s">ig @veat</h4><br><br>
 						</div>
 						<div class="col-lg-4" id="media">
