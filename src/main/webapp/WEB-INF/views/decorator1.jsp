@@ -40,11 +40,8 @@
 	<div class="wrapper">
 		<!--------------- navbar starts here --------------->
 		<nav>
-<<<<<<< HEAD
-			<span id="brand"> <a href="home">VEAT</a>
-=======
+
 			<span id="brand"> <a href="#">VEAT</a>
->>>>>>> branch 'dev' of https://github.com/Jean-MarcG/veat.git
 			</span>
 			<ul id="menu">
 				<li><a href="inscription">Inscription<span>.</span></a></li>

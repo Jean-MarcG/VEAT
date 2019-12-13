@@ -54,5 +54,12 @@ public class ConnexionController {
 		}
 
 	}
+	
+	@GetMapping(value = "/contact")
+	public String contact(Model model) {
+		
+		return "contact";
+	}
+	
 
 }
