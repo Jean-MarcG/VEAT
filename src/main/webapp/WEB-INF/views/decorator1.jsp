@@ -41,7 +41,9 @@
 		<!--------------- navbar starts here --------------->
 		<nav>
 
+
 			<span id="brand"> <a href="#">VEAT</a>
+
 			</span>
 			<ul id="menu">
 				<li><a href="inscription">Inscription<span>.</span></a></li>
