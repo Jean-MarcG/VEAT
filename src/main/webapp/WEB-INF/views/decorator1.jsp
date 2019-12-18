@@ -41,7 +41,6 @@
 		<!--------------- navbar starts here --------------->
 		<nav>
 
-			
 
 			<span id="brand"> <a href="#">VEAT</a>
 

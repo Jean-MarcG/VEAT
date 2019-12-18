@@ -17,8 +17,23 @@
             <h5 class="card-title text-center">Inscription</h5>
             <form class="form-signin">
               <div class="form-label-group">
-                <input type="text" id="inputUserame" class="form-control" placeholder="Nom" required autofocus>
+                <input type="text" id="nom" class="form-control" placeholder="Nom" required autofocus>
                 <label for="inputUserame"></label>
+              </div>
+              <div class="form-label-group">
+                <input type="text" id="prenom" class="form-control" placeholder="Prenom" required autofocus>
+                <label for="inputUserame"></label>
+              </div>
+              <div class="form-label-group" placeholder="Adresse">
+                <input type="text" id="voie" class="form-control" placeholder="Voie" required autofocus>
+                <input type="text" id="codePostal" class="form-control" placeholder="Code Postal" required autofocus>
+                <input type="text" id="ville" class="form-control" placeholder="Ville" required autofocus>
+                <input type="text" id="pays" class="form-control" placeholder="Pays" required autofocus>
+                <label for="inputUserame"></label>
+              </div>
+              <div class="form-label-group">
+                <input type="text" id="tel" class="form-control" placeholder="Telephone" required autofocus>
+                <label for="tel"></label>
               </div>
 
               <div class="form-label-group">
