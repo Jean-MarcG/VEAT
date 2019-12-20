@@ -48,7 +48,7 @@ public class ConnexionController {
 			} else {
 				model.addAttribute("msg", "Erreur d'authentification");
 				model.addAttribute("login-form", u);
-				return "connexion";
+				return "home";
 			}
 
 		}

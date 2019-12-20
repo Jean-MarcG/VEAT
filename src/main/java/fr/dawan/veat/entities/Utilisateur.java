@@ -35,6 +35,7 @@ public class Utilisateur extends DbObject implements Serializable {
 	
 	@NotEmpty
 	@Length(min = 8)
+//	pwd  donc dans path il faut mettre pwd
 	private String pwd;
 
 	@Enumerated(EnumType.STRING)
@@ -90,7 +91,13 @@ public class Utilisateur extends DbObject implements Serializable {
 	public void setRole(TypeUtilisateur role) {
 		this.role = role;
 	}
-	
+
+//	la methode toString() pour pouvoir voir l'objet dans un system.out.print();
+	@Override
+	public String toString() {
+		return "Utilisateur [prenom=" + prenom + ", nom=" + nom + ", email=" + email + ", pwd=" + pwd + ", role=" + role
+				+ ", coordonnees=" + coordonnees + "]";
+	}
 	
 
 }

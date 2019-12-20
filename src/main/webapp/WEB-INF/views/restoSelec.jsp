@@ -1,119 +1,88 @@
- 
- 
- 		<!--------------- hero section starts here --------------->
- <div class="container">
- 	
-	<div class="restaurantCard-container">
- 				
-	         <article id="content" class="restaurant_card">
-	         	
-		        			<summary class="restaurantSummary">
-		                 
-				                 <!-- <div class="hero-content">  --> 
-				                        <br><br>
-				                        
-				                        <div class="row">
-				                        
-				                              <div class="restaurantSummary-summaryWrapper col-xs-9">
-				                                    <br>
-				
-				                                    <h1 class="restaurantSummary-name">Le Dawan</h1><br><br>
-				
-				                                   			<div>
-				                                                <span class="restaurantSummary-address">adresse :</span>
-				                                                <h6 class="restaurantSummary-address">1 Place Occitane 31000 Toulouse</h6>
-				                                            </div>
-				                                            
-				                                     <ul id="restaurantTagContainer" class="list-unstyled restaurantTagContainer">
-				                                     	<li>
-				                                     		<div id="1">
-				                                     			<a href="" class="restaurantTag">Français</a>
-				                                     		</div>
-				                                     	</li>
-				                                     	<li>
-				                                     		<div id="2"><a href="" class="restaurantTag restaurantTag--event">Bio</a></div>
-				                                     	</li>				                                     					                                     
-				                                     </ul>  
-				
-												<div class="restaurantSummary-rateWrapper col-xs-3">
-													<div id="restaurantAvgRating" data-score-kitchen="10" data-score-service="8,8" data-score-ambiance="9,6" class="tooltipstered">
-														<div class="rating rating--big">
-															<span class="rating-ratingValue">9,6 </span>/10
-								                		</div>
-								                		<div class="reviewsCount reviewsCount--big">5 avis</div>
-								           			</div>
-								                </div>
-						            
-						                   </div> 
-						                   
-						           </summary>  
-						           
-						      <section>
-						      	<div class="carousel">
-						      	
-							      	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-										  <ol class="carousel-indicators">
-										    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-										    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-										    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-										  </ol>
-										  <div class="carousel-inner">
-										    <div class="carousel-item active">
-										      <img class="d-block w-100" src="resources/img/jay-wennington-N_Y88TWmGwA-unsplash.jpg" style="max-width: 100%;"  alt="First slide">
-										    </div>
-										    <div class="carousel-item">
-										      <img class="d-block w-100" src="resources/img/jay-wennington-N_Y88TWmGwA-unsplash.jpg" style="max-width: 100%;" alt="Second slide">
-										    </div>
-										    <div class="carousel-item">
-										      <img class="d-block w-100" src="resources/img/jay-wennington-N_Y88TWmGwA-unsplash.jpg" style="max-width: 100%;" alt="Third slide">
-										    </div>
-										  </div>
-										 
-									</div>
-						      	</div>
-						      </section>  
-						      
-						      <section id="restaurantContent">
-						      
-						       <br>
-                                    <p class="wow fadeInUp" data-wow-delay="1.8s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum officia molestiae laboriosam, rem reprehenderit. Laboriosam quae alias, iure nesciunt dolorum. Eaque, magni, enim. Dolores,
-                                     provident voluptas dicta commodi vel magni nesciunt sed maiores aperiam illo officiis voluptate at quod, praesentium excepturi enim.
-                                     provident voluptas dicta commodi vel magni nesciunt sed maiores aperiam illo officiis voluptate at quod, praesentium excepturi enim.
-                                     provident voluptas dicta commodi vel magni nesciunt sed maiores aperiam illo officiis voluptate at quod, praesentium excepturi enim.
-                                     provident voluptas dicta commodi vel magni nesciunt sed maiores aperiam illo officiis voluptate at quod, praesentium excepturi enim.
-                                     provident voluptas dicta commodi vel magni nesciunt sed maiores aperiam illo officiis voluptate at quod, praesentium excepturi enim.
-                                     </p>
-						      
-						      
-						      </section>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 
-		            
-		           
-		            
-		          </div>
-           	  <!--------------- hero section ends here --------------->
+<!DOCTYPE html>
+<html lang="UTF-8">
+
+<head>
+    <meta charset="utf-8">
+    <title>Page liste Restaurant</title>
+    <meta name="description" content="Example description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/restoSelec.css">
+    <link rel="stylesheet" href="resources/js/restoSelec.js">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+
             
-              <!--------------- project image section starts here --------------->
+            
+        
+<!-- 	            <div class="card mb-3" style="max-width: 740px;"> -->
+<!-- 	                <div class="row no-gutters"> -->
+<!-- 	                    <div class="col-md-4"> -->
+<!-- 	                        <img src="https://mk0tarestaurantt3wcn.kinstacdn.com/wp-content/uploads/2018/01/premiumforrestaurants_0.jpg" class="card-img" alt="..."> -->
+<!-- 	                    </div> -->
+<!-- 	                    <div class="col-md-8"> -->
+<!-- 	                        <div class="card-body"> -->
+<%-- 	                            <h5 class="card-title">${restaurant.nom}</h5> --%>
+<!-- 	                            <div class="stars"> -->
+<!-- 	                                <span class="fa fa-star" id="star1" onclick="add(this,1)"></span> -->
+<!-- 	                                <span class="fa fa-star" id="star2" onclick="add(this,2)"></span> -->
+<!-- 	                                <span class="fa fa-star" id="star3" onclick="add(this,3)"></span> -->
+<!-- 	                                <span class="fa fa-star" id="star4" onclick="add(this,4)"></span> -->
+<!-- 	                                <span class="fa fa-star" id="star5" onclick="add(this,5)"></span> -->
+<!-- 	                            </div> -->
+<!-- 	                            <div class="adresse"> -->
+<%-- 	                                <p class="card-description">${restaurant.cuisine}</p> --%>
+<%-- 	                                <p class="card-adress">${restaurant.coordonnees.voie} ${restaurant.coordonnees.ville}</p> --%>
+<%-- 	                                <p class="card-tel">${restaurant.coordonnees.tel} </p> --%>
+	                                
+<!-- 	                               <button type="button" class="btn btn-outline-success"></button></p> -->
+	
+<!-- 									<a href="restoSelec" class="btn btn-outline-success" role="button">Afficher</a> -->
+<!-- 	                            </div> -->
+<!-- 	                        </div> -->
+<!-- 	                    </div> -->
+<!-- 	                </div> -->
+<!-- 	            </div> -->
+
 
          
-            
-            
-           
-            <!--------------- project image section ends here --------------->
-
-            <br><br>
-
-          
-            <div class="whitespace"></div>
-          
-    </article>	
-    
-    
-    
-    
-    
+<%--         </form> --%>
+       
+<!--     </div> -->
  
-</div>
-    
-</div>
-
+		  <!--Product Showcase-->
+		  <section id="showcase">
+			    <div class="container" id='home'>
+			      <div class="row">
+			        <div class="col-md-6 col-sm-6">
+			          <div class="showcase-left">
+			            <img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/cc/0a/dc/restaurant-chocolat.jpg" alt="Google Home">
+			          </div>
+			        </div>
+			        <div class="col-md-6 col-sm-6">
+			          <div class="showcase-right">
+			            <h4>${restaurant.nom}</h4>
+			            <p>${restaurant.coordonnees.voie} ${restaurant.coordonnees.ville}</p>
+			            <a class="btn btn-light btn-lg showcase-btn">Read More</a>
+			          </div>
+			        </div>
+			      </div>
+			  </section>
+			
+			  <section class="testimonial">
+			    <div class="container">
+			      <p>"TV and the Internet are good because they keep stupid people from spending too much time out in public."</p>
+			      <p class="customer">A Mother</p>
+			    </div>
+		  </section>
+  <hr>
+</body>
+</html>

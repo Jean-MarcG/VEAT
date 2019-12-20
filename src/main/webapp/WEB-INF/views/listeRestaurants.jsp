@@ -41,10 +41,11 @@
 	                                <p class="card-description">${r.cuisine}</p>
 	                                <p class="card-adress">${r.coordonnees.voie} ${r.coordonnees.ville}</p>
 	                                <p class="card-tel">${r.coordonnees.tel} </p>
+	                                <p class="card-tel">${r.coordonnees.id} </p>
 	                                
 	                               <!--<button type="button" class="btn btn-outline-success"></button></p> -->
 	
-									<a href="#" class="btn btn-outline-success" role="button">Afficher</a>
+									<a href="restoSelec/${r.coordonnees.id}" class="btn btn-outline-success" role="button">Afficher</a>
 	                            </div>
 	                        </div>
 	                    </div>

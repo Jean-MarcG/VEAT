@@ -41,7 +41,9 @@
 		<!--------------- navbar starts here --------------->
 		<nav>
 
+
 			<span id="brand"> <a href="#">VEAT</a>
+
 			</span>
 			<ul id="menu">
 				<li><a href="inscription">Inscription<span>.</span></a></li>
@@ -107,10 +109,8 @@
 		    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
  -->
 		<!-- icons -->
-		<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-		<!-- gsap -->
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+		
+	
 		<!-- AnimeJS -->
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
@@ -118,9 +118,9 @@
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
 		<!-- terminal effect -->
-		<script src="t.min.js"></script>
+		<script src="/veat/resources/js/t.min.js"></script>
 		<!-- for on scroll animations -->
-		<script src="resources/js/wow.min.js"></script>
+		<script src="/veat/resources/js/wow.min.js"></script>
 		<!-- greensock cdn -->
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>

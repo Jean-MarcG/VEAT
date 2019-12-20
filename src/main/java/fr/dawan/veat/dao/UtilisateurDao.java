@@ -20,7 +20,7 @@ public class UtilisateurDao {
 	@SuppressWarnings("unchecked")
 	@Transactional(readOnly = true)
 	public Utilisateur findByEmail(String email) {
-		List<Utilisateur> lu = em.createQuery("FROM User u WHERE u.email= :email")
+		List<Utilisateur> lu = em.createQuery("FROM Utilisateur u WHERE u.email= :email")
 			.setParameter("email", email)
 			.getResultList();
 		Utilisateur u = null;
@@ -47,7 +47,7 @@ public class UtilisateurDao {
 		return nb;
 	}
 	
-	@Transactional(readOnly = false)
+	@Transactional
 	public void insert(Utilisateur u) {
 		em.persist(u);
 	}

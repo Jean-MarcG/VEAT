@@ -1,8 +1,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head>
 <!-- stylesheet -->
 <link rel="stylesheet" href="resources/css/home.css">
+<script src="${pageContext.request.contextPath}/resources/js/recherche.js"></script>
 </head>
 <body>
 <a name="home"></a>
@@ -20,8 +23,19 @@
 					</p>
 				</div>
 				<div class="search-container">
-					<input type="text" placeholder="une table près de vous...."
-						name=""> <i class="fas fa-search"></i>
+				<!--  voilà la barre de recherche  -->
+				<!--  la premiere idee qui me vient c'est avec du js => recuperer la soit la saisie et faire un tri sinon lorsqu'on clique sur le button -->
+					<!-- oninput="" c'est un evenement HTML qui se declenche a chaque fois qu'une touche est appuyée, cet evenement appelle la 
+						fonction  rechercher() du javascript en lui donnant l'evenement (ou, quand, comment, sur quoi l'utilisateur a appuyée
+					 -->
+					 <!-- oninput="rechercher(event)" -->
+					 <form:form action="listeRestaurants" method="post" modelAttribute="search-form">
+						<form:input path="search" type="text" placeholder="une table près de vous...."/>
+						<!--  <a  href="listeRestaurants"><i class="fas fa-search"></i></a>  -->
+						<button type="submit"><i class="fas fa-search"></i></button>
+					 </form:form>
+
+						
 				</div>
 				<div class="shipping">
 					<p class="wow fadeInUp" data-wow-delay="0.5s">veat@dawan.fr</p>
@@ -29,7 +43,7 @@
 			</div>
 			<div class="col-lg-6 hero-right">
 				<div class="hero-image">
-					<img src="resources/img/shawn-ang-nmpW_WwwVSc-unsplash.jpg"
+					<img src="/veat/resources/img/shawn-ang-nmpW_WwwVSc-unsplash.jpg"
 						class="img-fluid wow fadeInUp" data-wow-delay="0.3s"
 						alt="Responsive image">
 				</div>
