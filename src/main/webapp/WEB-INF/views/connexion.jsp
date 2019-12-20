@@ -7,6 +7,9 @@
 	<!-- stylesheet -->
 
 	<link rel="stylesheet" href="resources/css/connexion.css">
+	<!-- fontAwespme cdn -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
 
 	<base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/"%>"/>
 </head>

@@ -61,17 +61,14 @@ public class RestaurantController {
 		System.out.print("sf = ");
 		System.out.println(sf.getSearch());
 		
-
 		List<Restaurant> r = restaurantDao.findByVille(sf.getSearch());
 		List<Restaurant> r1 = restaurantDao.findByPays(sf.getSearch());
-		
-		
+				
 		System.out.print("r = ");
 		for (Restaurant res: r) {
 			System.out.println(res.getNom());
 		}
-		
-		
+			
 		r.addAll(r1);
 		model.addAttribute("restaurants", r);
 		model.addAttribute("page", 1);
@@ -82,14 +79,16 @@ public class RestaurantController {
 		return "listeRestaurants";
 	}
 	
+	
 	@GetMapping(value = "/myrestaurant")
 	public String showRestaurant(Model model) {
 		Utilisateur u = new Utilisateur();
 		model.addAttribute("login-form", new Utilisateur());
-
+		model.addAttribute("search-form", new SearchForm());
 		return "myrestaurant";
 	}
 
+	
 	
 
 }

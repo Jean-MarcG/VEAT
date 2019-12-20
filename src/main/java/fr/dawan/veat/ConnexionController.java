@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import fr.dawan.veat.dao.UtilisateurDao;
 import fr.dawan.veat.entities.Utilisateur;
+import fr.dawan.veat.form.SearchForm;
 
 @Controller
 public class ConnexionController {
@@ -44,22 +45,49 @@ public class ConnexionController {
 				session.setAttribute("userName", dbUser.getNom());
 				session.setAttribute("userRole", dbUser.getRole().toString());
 				System.out.println(">>>>>>>>>>>>>>" + (Boolean)session.getAttribute("userConnected"));
-				return "home";
+				model.addAttribute("search-form", new SearchForm());
+				
+				String role = (String) session.getAttribute("userRole");
+				
+					if(role.equals("RESTAURATEUR")) {
+						model.addAttribute("search-form", new SearchForm());
+						return "myrestaurant";
+					} else {
+						return "home";
+					}
+				
+				
 			} else {
 				model.addAttribute("msg", "Erreur d'authentification");
 				model.addAttribute("login-form", u);
-				return "home";
+//				model.addAttribute("search-form", new SearchForm());
+//				System.out.println("userConnected ? " + session.getAttribute("userConnected"));
+//				ca serait mieux de rester sur login non ? en cas d'erreur d'authentification ? opk
+				return "connexion";
 			}
 
 		}
 
 	}
-	
+
 	@GetMapping(value = "/contact")
 	public String contact(Model model) {
-		
+
 		return "contact";
 	}
-	
+
+	// Deconnection
+	@GetMapping(value = "/logout")
+	public String logout(HttpSession session, Model m) {
+//			dans le doute
+		session.setAttribute("userConnected", false);
+		session.setAttribute("userId", 0);
+		session.setAttribute("userName", null);
+		session.invalidate();
+		// si besoin de réafficher un formulaire
+		m.addAttribute("search-form", new SearchForm());
+		m.addAttribute("login-form", new Utilisateur());
+		return "home";
+	}
 
 }

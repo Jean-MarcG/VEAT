@@ -40,14 +40,20 @@
 	<div class="wrapper">
 		<!--------------- navbar starts here --------------->
 		<nav>
-
-
 			<span id="brand"> <a href="#">VEAT</a>
-
 			</span>
 			<ul id="menu">
-				<li><a href="inscription">Inscription<span>.</span></a></li>
-				<li><a href="connexion">Se connecter<span>.</span></a></li>
+				<li><a href="inscription">Inscription</a></li>
+				<li>
+				<c:choose>
+				<c:when test="${sessionScope.userConnected}">
+				<a href="logout">Se déconnecter</a>
+					</c:when>
+					<c:otherwise>
+							<a href="connexion">Se connecter<span>.</span></a>			
+						</c:otherwise>
+				</c:choose>
+				</li>
 			</ul>
 			<div id="toggle">
 				<div class="span">menu</div>
@@ -56,9 +62,7 @@
 		<div id="resize">
 			<div class="close-btn">close</div>
 			<ul id="menu">
-				<li><a href="">Inscription<span>.</span></a></li>
-				
-				
+				<li><a href="inscription">Inscription<span>.</span></a></li>
 				<li>
 					<c:out value="${sessionScope.userConnected}" />
 					<c:choose>
@@ -66,7 +70,7 @@
 							<a href="#">Bienvenue ${sessionScope.userName}</a>
 						</c:when>
 						<c:otherwise>
-							<a href="connexion">Se connecter<span>.</span></a>						
+							<a href="connexion">Se connecter<span>.</span></a>			
 						</c:otherwise>
 					</c:choose>
 				</li>
@@ -86,14 +90,13 @@
 				<div class="info">
 					<div class="row">
 						<div class="col-lg-4" id="personal">
-							<a class="wow fadeInUp" href="contact" >Contact</a>
-							<h4 class="wow fadeInUp" data-wow-delay="0.2s">ig @veat</h4><br><br>
+							<a class="wow fadeInUp" data-wow-delay="0.2s" href="contact" >Contact</a>
 						</div>
 						<div class="col-lg-4" id="media">
-							<p class="wow fadeInUp" data-wow-delay="0s">follow me</p>
+							<p class="wow fadeInUp" data-wow-delay="0s">Suivez-nous</p>
 							<ul>
-								<li id="fb" class="wow fadeInUp" data-wow-delay="0.4s">fb</li>
-								<li id="ig" class="wow fadeInUp" data-wow-delay="0.6s">ig</li>
+								<li class="wow fadeInUp" data-wow-delay="0.4s"><i class="fab fa-facebook-f"></i></li>
+								<li class="wow fadeInUp" data-wow-delay="0.6s"><i class="fab fa-instagram"></i></li>
 							</ul><br><br>
 						</div>
 						<div class="col-lg-4" id="address">
@@ -118,9 +121,9 @@
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
 		<!-- terminal effect -->
-		<script src="/veat/resources/js/t.min.js"></script>
+		<script src="resources/js/t.min.js"></script>
 		<!-- for on scroll animations -->
-		<script src="/veat/resources/js/wow.min.js"></script>
+		<script src="resources/js/wow.min.js"></script>
 		<!-- greensock cdn -->
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>

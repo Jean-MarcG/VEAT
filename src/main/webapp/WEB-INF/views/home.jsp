@@ -31,7 +31,6 @@
 					 <!-- oninput="rechercher(event)" -->
 					 <form:form action="listeRestaurants" method="post" modelAttribute="search-form">
 						<form:input path="search" type="text" placeholder="une table près de vous...."/>
-						<!--  <a  href="listeRestaurants"><i class="fas fa-search"></i></a>  -->
 						<button type="submit"><i class="fas fa-search"></i></button>
 					 </form:form>
 

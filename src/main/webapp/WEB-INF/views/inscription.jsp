@@ -54,6 +54,24 @@
                 <form:label path="email" for="inputEmail"/>
               </div>
               
+<!--             <div class="custom-control custom-radio custom-control-inline"> -->
+<%-- 				<form:input path="role" type="role" id="inputRole" class="form-control"/> --%>
+<%-- 			    <form:label path="role" class="custom-control-label" for="customRadioInline1">CLIENT</form:label> --%>
+<!-- 			</div> -->
+<!-- 			<div class="custom-control custom-radio custom-control-inline"> -->
+<%-- 				<form:input path="role" type="role" id="inputRole" class="form-control"/> --%>
+<%-- 			    <form:label path="role" class="custom-control-label" for="customRadioInline1">RESTAURATEUR</form:label> --%>
+<!-- 			</div> -->
+
+				<div class="custom-control custom-radio custom-control-inline">
+				  <form:radiobutton path="role" id="customRadioInline1" name="customRadioInline1" class="custom-control-input"/>
+				  <label class="custom-control-label" for="customRadioInline1">CLIENT</label>
+				</div>
+				<div class="custom-control custom-radio custom-control-inline">
+				  <form:radiobutton path="role" id="customRadioInline2" name="customRadioInline1" class="custom-control-input"/>
+				  <label class="custom-control-label" for="customRadioInline2">RESTAURATEUR</label>
+				</div>
+              
               <hr>
 
               <div class="form-label-group">
@@ -62,10 +80,10 @@
               </div>
               
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Enregistrer</button>
-              <a class="d-block text-center mt-2 small" href="#">Se connecter</a>
-              <hr class="my-4">
-              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> S'enregistrer avec Google</button>
-              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> S'enregistrer avec Facebook</button>
+              <a class="d-block text-center mt-2 small" href="connexion">Se connecter</a>
+<!--               <hr class="my-4"> -->
+<!--               <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> S'enregistrer avec Google</button> -->
+<!--               <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> S'enregistrer avec Facebook</button> -->
             </form:form>
           </div>
         </div>
