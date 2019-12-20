@@ -1,4 +1,6 @@
-package fr.dawan.veat.entities;
+package fr.dawan.veat.form;
+
+import fr.dawan.veat.entities.Utilisateur;
 
 public class SignUpForm extends Utilisateur{
 	public String confirmPwd;
